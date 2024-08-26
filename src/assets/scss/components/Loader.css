@@ -1,0 +1,14 @@
+.loader .ant-progress {
+  margin-bottom: 0;
+  display: inherit;
+}
+.loader .ant-progress .ant-progress-outer {
+  display: inherit;
+  height: 3px !important;
+}
+.loader .ant-progress .ant-progress-outer .ant-progress-inner {
+  display: inherit;
+}
+.loader .ant-progress .ant-progress-outer .ant-progress-inner .ant-progress-bg {
+  height: 3px !important;
+}/*# sourceMappingURL=Loader.css.map */

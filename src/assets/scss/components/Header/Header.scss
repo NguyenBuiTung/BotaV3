@@ -1,0 +1,21 @@
+.header_left {
+  width: 40%;
+  img {
+    vertical-align: middle;
+    max-width: 120px;
+  }
+}
+.header_right {
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .ant-badge{
+    &:hover{
+        cursor: pointer;
+    }
+  }
+  .ant-dropdown-trigger{
+    padding: 0 20px;
+  }
+}

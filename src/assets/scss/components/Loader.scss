@@ -1,0 +1,16 @@
+.loader {
+  .ant-progress {
+    margin-bottom: 0;
+    display: inherit;
+    .ant-progress-outer {
+      display: inherit;
+      height: 3px !important;
+      .ant-progress-inner {
+        display: inherit;
+        .ant-progress-bg {
+          height: 3px !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+@import "./assets/scss/components/Header/Header.scss";
+@import "./assets/scss/pages/Login/LoginBanner.scss";
+@import "./assets/scss/pages/Login/LoginIdWeb.scss";
+@import "./assets/scss/pages/Content/Home.scss";
+@import "./assets/scss/pages/Content/BodyHome/HomeBody.scss";
+@import "./assets/scss/pages/Content/Product/ProductDetails.scss";
+@import "./assets/scss/components/Loader.scss";
+@import "./assets/scss/components/Slider/Silder.scss"

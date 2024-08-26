@@ -1,0 +1,55 @@
+.header_login_banner {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+  img {
+    max-width: 100%;
+  }
+}
+.main_login_banner {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  background-image: url("./assets/img/dangnhap.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  .box_login_banner {
+    background: rgba(180, 191, 200, 0.87);
+    padding: 0 10px 10px 10px;
+    width: 400px !important;
+    margin: 40px;
+    height: 325px;
+    border: 1px solid #fff;
+    .box_login {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 20px;
+      h2 {
+        font-size: 20px;
+        color: #007cdc;
+        text-align: center;
+      }
+      img {
+        width: 90px;
+        margin: 20px auto;
+        display: block;
+      }
+    }
+  }
+}
+.ant-popover {
+  .ant-popover-content {
+    .ant-popover-inner {
+      background-color: rgba(180, 191, 200, 0.87);
+      width: 400px;
+      padding: 20px 45px 10px 45px;
+      .ant-popover-title {
+      }
+      .ant-popover-inner-content {
+      }
+    }
+  }
+}
