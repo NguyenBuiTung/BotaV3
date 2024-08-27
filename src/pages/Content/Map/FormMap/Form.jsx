@@ -165,24 +165,33 @@ function Locate({ panTo, setValue2, setSelectedOption, selectedOption,setSelecte
       message.error(error);
     }
   };
-  const handleLocate = () => {
-    navigator.geolocation.getCurrentPosition(
-      async (position) => {
-        const { latitude, longitude } = position.coords;
+  const handleLocate = async () => {
+    try {
+        const position = await new Promise((resolve, reject) => {
+            navigator.geolocation.getCurrentPosition(resolve, reject);
+        });
+
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+
+        // Sử dụng panTo để di chuyển đến vị trí mới
         panTo({ lat: latitude, lng: longitude });
-        try {
-          const results = await getGeocode({
+
+        // Lấy địa chỉ định dạng từ toạ độ
+        const results = await getGeocode({
             location: { lat: latitude, lng: longitude },
-          });
-          const { formatted_address } = results[0];
-          setValue(formatted_address);
-        } catch (error) {
-          message.error(error);
-        }
-      },
-      () => null
-    );
-  };
+        });
+
+        const { formatted_address } = results[0];
+
+        // Cập nhật địa chỉ vào giá trị
+        setValue(formatted_address);
+
+    } catch (error) {
+        console.error("Error Code = " + error.code + " - " + error.message);
+    }
+};
+
   const handleOptionChange = (e) => {
     setSelectedOption(e.target.value);
   };
